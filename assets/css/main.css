@@ -1224,7 +1224,8 @@ section,
 
 .herocar .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 100%); */
+  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color) 90%, transparent) 20%, transparent 99%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1354,6 +1355,7 @@ section,
 .about {
   padding-top: 60px;
   background-color: var(--background-color);
+  background-color: #fff;
   overflow: hidden;
   padding-bottom: 60px;
 }
@@ -6553,4 +6555,14 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+
+/*--------------------------------------------------------------
+# Tiago
+--------------------------------------------------------------*/
+
+.hide {
+  display: none !important;
 }
