@@ -23,8 +23,14 @@
   --default-color: #475569; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1e293b; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0ea5e9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  /* --accent-color: #472878; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --gradient-clinica: linear-gradient(to right,#6051e6 6%,#5966e7 25%,#4f81e9 55%,#499bea 69%,#43a5eb 83%,#3bbeec 99%);  /* Fundo ao da Useall */
+  --gradient-clinica-light: linear-gradient(to right,#4f81e9 5%,#499bea 50%,#43a5eb 83%,#3bbeec 99%);
+  --accent2-color: #6051e6;
+  
+
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -87,8 +93,11 @@ h6 {
   font-family: var(--heading-font);
 }
 
-.hero h1 {
-  background: linear-gradient(to right, #0ea5e9, #472878);
+.gradient-font {
+  /* background: linear-gradient(to right, var(--accent-color), #472878);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background: var(--gradient-clinica);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -184,8 +193,8 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
-
+  background: var(--accent2-color);
+  /* background: linear-gradient(90deg, var(--accent-color) 0%, #0284c7 100%); */
   padding: 10px 25px;
   margin: 0;
   border-radius: 50px;
@@ -195,8 +204,14 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
+  /* color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+   background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent-color), black 10%),
+    color-mix(in srgb, #0284c7, black 10%)
+  ); */
+  opacity: .8;
 }
 
 .header .btn-getstarted i {
@@ -246,7 +261,7 @@ h6 {
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -873,7 +888,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -958,7 +973,7 @@ section,
 }
 
 .hero .hero-content .hero-headline {
-  font-size: 3rem;
+  
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 24px;
@@ -1015,7 +1030,7 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--accent-color);
+  background: var(--accent2-color);
   color: var(--contrast-color);
   padding: 16px 32px;
   border-radius: 50px;
@@ -1096,8 +1111,8 @@ section,
 }
 
 .hero .stats-grid .stat-card.stat-card-primary {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--accent2-color);
+ /* border-color: var(--accent-color); */
 }
 
 .hero .stats-grid .stat-card.stat-card-primary .stat-icon-wrap {
@@ -1114,8 +1129,8 @@ section,
 }
 
 .hero .stats-grid .stat-card.stat-card-primary:hover {
-  background: color-mix(in srgb, var(--accent-color), black 10%);
-  box-shadow: 0 20px 50px color-mix(in srgb, var(--accent-color), transparent 50%);
+  /* background: color-mix(in srgb, var(--accent-color), black 10%); */
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--accent2-color), transparent 50%);
 }
 
 .hero .stats-grid .stat-card.stat-card-accent {
@@ -1202,7 +1217,7 @@ section,
 }
 @media (max-width: 768px) {
   .herocar {
-    margin-top:66px
+    /* margin-top:66px */
   }
 }
 
@@ -1214,6 +1229,13 @@ section,
   background-color: var(--background-color);
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .herocar .carousel {
+    min-height: 50vh;
+  }
+}
+
 
 .herocar img {
   position: absolute;
@@ -1237,7 +1259,17 @@ section,
 .herocar .carousel-item:before {  /* Fundo azul dos slides */
   content: "";
   /* background: color-mix(in srgb, var(--background-color), transparent 100%); */
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color) 90%, transparent) 20%, transparent 99%);
+  /* ORIGINAL ==> background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color) 90%, transparent) 20%, transparent 99%); */
+  /* background: linear-gradient(to right,#6051e6 6%,#5966e7 25%,#4f81e9 55%,#499bea 69%,#43a5eb 83%,#3bbeec 99%) */
+  background: linear-gradient(
+    to right,
+    rgba(96,81,230,0.85) 6%,
+    rgba(89,102,231,0.85) 25%,
+    rgba(79,129,233,0.85) 55%,
+    rgba(73,155,234,0.85) 69%,
+    rgba(67,165,235,0.85) 83%,
+    rgba(59,190,236,0.85) 99%
+  );
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -6897,6 +6929,7 @@ section,
 .gclose svg {
   width: 28px !important;
   height: 28px !important;
+  border-radius: 20px;
 }
 .glightbox-clean .gclose {
   top: 30px !important;   /* mais para baixo */
