@@ -1022,6 +1022,9 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  font-size: 1.3rem;
+  text-wrap: balance;
+  color:#999;
 }
 
 /*--------------------------------------------------------------
@@ -1576,26 +1579,27 @@ section,
 
 .about .experience-badge {
   position: absolute;
-  top: 40px;
-  left: -30px;
-  background: var(--accent-color);
+  top: -25px;
+  left: -10px;
+  /* background: var(--accent-color);
   color: var(--contrast-color);
-  padding: 24px 30px;
-  border-radius: 16px;
+   padding: 24px 30px; 
+  border-radius: 16px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   z-index: 4;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
-  animation: float-badge 3s ease-in-out infinite;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 100%);
+  animation: float-badge 2s ease-in-out infinite;
+  min-width: 100px;
 }
 
 @media (max-width: 768px) {
-  .about .experience-badge {
-    left: 20px;
-    top: 20px;
-    padding: 16px 20px;
+  .about .experience-badge img {
+    left: 0px;
+    top: -40px;
+    max-width:140px !important;
   }
 }
 
@@ -7187,3 +7191,33 @@ section,
   right: 30px !important; /* mais para a esquerda */
 }
 
+/* Janela modal ao iniciar o site */
+.modal-content {
+  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+.parallax-section {
+  height: 400px;
+  background-image: url('../img/team1.jpg'); /* imagem qualquer */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* efeito parallax */
+  position: relative;
+}
+
+/* opcional: overlay escuro pra melhorar leitura */
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0,0,0,0.4); */
+}
+
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
+}
