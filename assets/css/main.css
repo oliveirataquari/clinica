@@ -7201,7 +7201,7 @@ section,
   height: 400px;
   background-image: url('../img/team1.jpg'); /* imagem qualquer */
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed; /* efeito parallax */
   position: relative;
 }
@@ -7220,4 +7220,28 @@ section,
 .parallax-section .container {
   position: relative;
   z-index: 2;
+}
+
+/* Galeria (grid de imagens) */
+.gallery-item {
+  cursor: pointer;
+}
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 8px;
+}
+.nav-arrow.left {
+  left: 10px;
+}
+.nav-arrow.right {
+  right: 10px;
 }

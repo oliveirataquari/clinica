@@ -171,7 +171,7 @@
                   <i class="bi bi-patch-check"></i>
                 </div>
                 <div class="stat-info">
-                  <span class="stat-value">15+</span>
+                  <span class="stat-value">12+</span>
                   <span class="stat-title">De experiência na área da saúde</span>
                 </div>
               </div>
@@ -206,8 +206,8 @@
               <div class="image-main">
                 <img src="assets/img/fachada1.jpg" alt="Business meeting" class="img-fluid">
               </div>
-              <div class="image-offset hide">
-                <img src="assets/img/about/about-square-3.webp" alt="Detail shot" class="img-fluid" style="max-width: 200px;">
+              <div class="image-offset" style="max-width: 260px; height:200px">
+                <img src="assets/img/about/about-square-3.webp" alt="Detail shot" class="img-fluid">
               </div>
               <div class="experience-badge">
                 <img src="assets/img/12anos.webp" alt="Detail shot" class="img-fluid" style="max-width: 180px;">
@@ -260,13 +260,71 @@
     </section><!-- /About Section -->
 
 
-
+    <!-- Imagem equipe com paralax ou fundo fixo: -->
     <section class="parallax-section d-flex align-items-center text-center text-white">
       <div class="container">
        <!-- <h2 class="fw-bold">Título da Seção</h2>
         <p>Um pequeno texto descritivo aqui</p> -->
       </div>
-    </section>
+    </section><!-- /fim imagem equipe -->
+
+
+    <!-- Galeria de Imagens -->
+    <section class="d-flex align-items-center text-center">
+      <div class="container">
+        
+        <div class="py-5">
+          <div class="row g-3">
+
+            <div class="col-md-4">
+              <img src="https://picsum.photos/400/300?1"
+                  class="img-fluid rounded gallery-item"
+                  data-index="0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal">
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://picsum.photos/400/300?2"
+                  class="img-fluid rounded gallery-item"
+                  data-index="1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal">
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://picsum.photos/400/300?3"
+                  class="img-fluid rounded gallery-item"
+                  data-index="2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0 position-relative">
+              
+              <!-- seta esquerda -->
+              <button class="nav-arrow left" id="prevBtn">&#10094;</button>
+
+              <!-- imagem -->
+              <div class="modal-body p-0">
+                <img id="modalImage" src="" class="img-fluid w-100 rounded">
+              </div>
+
+              <!-- seta direita -->
+              <button class="nav-arrow right" id="nextBtn">&#10095;</button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /fim imagens clínica -->
 
 
 
