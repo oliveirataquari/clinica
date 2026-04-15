@@ -255,107 +255,68 @@
 
       </div>
 
-      <!-- CAROUSEL-->
-<div class="py-2">
-  <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel">
-    
-    <div class="carousel-inner">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row g-2">
+    <!-- Imagem equipe com paralax ou fundo fixo: -->
+      <div class=" parallax-section d-flex align-items-center text-center text-white">
+       <!-- <h2 class="fw-bold">Título da Seção</h2>
+        <p>Um pequeno texto descritivo aqui</p> -->
+      </div>
+
+
+
+      <!-- Section Title yyyyy -->
+      <div class="container section section-title" data-aos="fade-up" ata-aos-delay="100" >
+        <h2 class="gradient-font">Algumas imagens da clínica</h2>
+       <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="containerxxx" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="row g-3">
 
           <div class="col-md-4">
             <img src="https://picsum.photos/400/300?1"
-                 class="img-fluid rounded gallery-item"
-                 data-index="0"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
+                class="img-fluid rounded gallery-item"
+                data-index="0"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal">
           </div>
 
           <div class="col-md-4">
             <img src="https://picsum.photos/400/300?2"
-                 class="img-fluid rounded gallery-item"
-                 data-index="1"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
+                class="img-fluid rounded gallery-item"
+                data-index="1"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal">
           </div>
 
           <div class="col-md-4">
             <img src="https://picsum.photos/400/300?3"
-                 class="img-fluid rounded gallery-item"
-                 data-index="2"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
+                class="img-fluid rounded gallery-item"
+                data-index="2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal">
           </div>
 
         </div>
-      </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row g-3">
-
-          <div class="col-md-4">
-            <img src="https://picsum.photos/400/300?4"
-                 class="img-fluid rounded gallery-item"
-                 data-index="3"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0 position-relative">
+              <!-- seta esquerda -->
+              <button class="nav-arrow left" id="prevBtn">&#10094;</button>
+              <!-- imagem -->
+              <div class="modal-body p-0">
+                <img id="modalImage" src="" class="img-fluid w-100 rounded">
+              </div>
+              <!-- seta direita -->
+              <button class="nav-arrow right" id="nextBtn">&#10095;</button>
+            </div>
           </div>
-
-          <div class="col-md-4">
-            <img src="https://picsum.photos/400/300?5"
-                 class="img-fluid rounded gallery-item"
-                 data-index="4"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
-          </div>
-
-          <div class="col-md-4">
-            <img src="https://picsum.photos/400/300?6"
-                 class="img-fluid rounded gallery-item"
-                 data-index="5"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal">
-          </div>
-
         </div>
+
       </div>
-
-    </div>
-
-    <!-- Controles do carousel -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
-  </div>
-</div>
-
-<!-- Modal (mesmo que já usamos) -->
-<div class="modal fade" id="imageModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-transparent border-0 position-relative">
-      
-      <button class="nav-arrow left" id="prevBtn">&#10094;</button>
-
-      <div class="modal-body p-0">
-        <img id="modalImage" src="" class="img-fluid w-100 rounded">
-      </div>
-
-      <button class="nav-arrow right" id="nextBtn">&#10095;</button>
-
-    </div>
-  </div>
-</div>
-
-      <!-- FIM CAROUSEL-->
-
       
     </section><!-- /About Section -->
 

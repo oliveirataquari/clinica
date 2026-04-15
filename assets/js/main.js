@@ -212,6 +212,7 @@
     });
   });
 
+
   /**
    * Galeria de imagens (modal)
    */
@@ -232,10 +233,8 @@
     currentIndex = (currentIndex + 1) % images.length;
     modalImage.src = images[currentIndex].src;
   });
- /* aqui só para o teclado do PC */
   document.addEventListener('keydown', function (e) {
     const modal = document.getElementById('imageModal');
-    // só funciona se o modal estiver aberto
     if (modal.classList.contains('show')) {
       if (e.key === 'ArrowLeft') {
         document.getElementById('prevBtn').click();
@@ -245,7 +244,6 @@
       }
     }
   });
-
 
 
 

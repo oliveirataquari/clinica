@@ -7222,10 +7222,16 @@ section,
   z-index: 2;
 }
 
+
 /* Galeria (grid de imagens) */
 .gallery-item {
   cursor: pointer;
 }
+
+.gallery-item img {
+  padding:0 10px !important;
+}
+
 .nav-arrow {
   position: absolute;
   top: 50%;
@@ -7237,11 +7243,13 @@ section,
   padding: 10px 15px;
   cursor: pointer;
   z-index: 10;
-  border-radius: 8px;
 }
+
 .nav-arrow.left {
   left: 10px;
 }
+
 .nav-arrow.right {
   right: 10px;
 }
+
