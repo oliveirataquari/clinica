@@ -7243,6 +7243,7 @@ section,
   padding: 10px 15px;
   cursor: pointer;
   z-index: 10;
+  border-radius: 8px;
 }
 
 .nav-arrow.left {
@@ -7253,3 +7254,16 @@ section,
   right: 10px;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 00);
+  padding: 10px 20px;
+  height: 60px !important;
+  border-radius: 5px;
+}
+.carousel-control-prev-icon {
+  margin-left: -80px;
+}
+.carousel-control-next-icon {
+  margin-left: 80px;
+}
