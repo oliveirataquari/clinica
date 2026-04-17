@@ -270,6 +270,70 @@
       </div>
 
 
+      <!-- Carousel de imagens-->
+      <div class="container hide">
+        <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false" data-aos="fade-up" data-aos-delay="300" >
+
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-5">
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?1" class="img-fluid rounded gallery-item" data-index="0"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?2" class="img-fluid rounded gallery-item" data-index="1"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?3" class="img-fluid rounded gallery-item" data-index="2"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-5">
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?4" class="img-fluid rounded gallery-item" data-index="3"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?5" class="img-fluid rounded gallery-item" data-index="4"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <img src="https://picsum.photos/400/300?6" class="img-fluid rounded gallery-item" data-index="5"
+                    data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controles do carousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+
       <!-- Modal que abre imagem do carousel -->
       <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -293,26 +357,26 @@
           <!-- Right Testimonials Slider -->
           <div class="col-lg" data-aos="fade-left" data-aos-delay="200">
             <div class="testimonials-carousel swiper init-swiper">
-             <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 700,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": 1,
-                "spaceBetween": 12,
-                "simulateTouch": false,
-                "navigation": {
-                  "nextEl": ".swiper-button-next",
-                  "prevEl": ".swiper-button-prev"
-                },
-                "breakpoints": {
-                  "768": {
-                    "slidesPerView": 3
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 700,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": 1,
+                  "spaceBetween": 24,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                  "breakpoints": {
+                    "768": {
+                      "slidesPerView": 3
+                    }
                   }
                 }
-              }
               </script>
 
               <div class="swiper-wrapper">
@@ -344,9 +408,7 @@
 
               </div>
 
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <!-- <div class="swiper-pagination"></div> -->
+              <div class="swiper-pagination"></div>
 
             </div>
 

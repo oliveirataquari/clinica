@@ -7267,3 +7267,14 @@ section,
 .carousel-control-next-icon {
   margin-left: 80px;
 }
+
+
+
+.about .swiper-slide img {
+  width: 100% !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
