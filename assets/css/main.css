@@ -235,7 +235,6 @@ h6 {
 }
 
 
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -265,10 +264,10 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 16px;
+    font-size: 16px !important;
     padding: 18px 17px;
     font-family: var(--nav-font);
-    font-weight: 600;
+    font-weight: 600 !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,10 +288,10 @@ h6 {
     content: "";
     position: absolute;
     left: 18px;
-    bottom: 8px;
-    width: 8px;
-    height: 8px;
-    background: var(--accent2-color);
+    bottom: 8px !important;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--accent2-color) !important;
     border-radius: 50%;
     opacity: 0;
     transform: scale(0);
@@ -574,8 +573,6 @@ h6 {
     max-height: 100vh;
   }
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -1596,10 +1593,10 @@ section,
 }
 
 @media (max-width: 768px) {
-  .about .experience-badge img {
-    left: 0px;
-    top: -40px;
-    max-width:140px !important;
+  .about .experience-badge {
+    left: 20px;
+    top: 20px;
+    padding: 16px 20px;
   }
 }
 
@@ -2079,7 +2076,6 @@ section,
 .service-link span, .service-link i {
   display: none !important;
 }
-
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -3881,8 +3877,6 @@ section,
   background: color-mix(in srgb, var(--accent-color) 15%, transparent);
   color: var(--accent-color);
   margin-bottom: 12px;
-
-  display: none;
 }
 
 .team .team-card .member-info h4 {
@@ -7191,90 +7185,182 @@ section,
   right: 30px !important; /* mais para a esquerda */
 }
 
-/* Janela modal ao iniciar o site */
-.modal-content {
-  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.5);
-}
-
-
-.parallax-section {
-  height: 400px;
-  background-image: url('../img/team1.jpg'); /* imagem qualquer */
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed; /* efeito parallax */
-  position: relative;
-}
-
-/* opcional: overlay escuro pra melhorar leitura */
-.parallax-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0,0,0,0.4); */
-}
-
-.parallax-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-
-/* Galeria (grid de imagens) */
-.gallery-item {
-  cursor: pointer;
-}
-
-.gallery-item img {
-/*  padding:0 10px !important; */
-}
-
-.nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #fff;
-  background: rgba(0,0,0,0.4);
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 8px;
-}
-
-.nav-arrow.left {
-  left: 10px;
-}
-
-.nav-arrow.right {
-  right: 10px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 00);
-  padding: 10px 20px;
-  height: 60px !important;
-  border-radius: 5px;
-}
-.carousel-control-prev-icon {
-  margin-left: -80px;
-}
-.carousel-control-next-icon {
-  margin-left: 80px;
-}
 
 
 
-.about .swiper-slide img {
-  width: 100% !important;
-}
+/*--------------------------------------------------------------
+# Navigation Menu (examinar)
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #fff;
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu>ul>li {
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    /* padding: 12px 18px; EXAMINE AQUI */
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 11px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .navmenu>ul>li>a::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    bottom: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+  }
+
+  .navmenu>ul>li>a:hover,
+  .navmenu>ul>li>.active,
+  .navmenu>ul>li>.active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu>ul>li>a:hover::after,
+  .navmenu>ul>li>.active::after,
+  .navmenu>ul>li>.active:focus::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .navmenu>ul>li:hover>a i {
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 20px;
+    background: var(--nav-dropdown-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: calc(100% + 20px);
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.18);
+    min-width: 220px;
+    overflow: visible;
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 100%;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--nav-dropdown-color);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navmenu .dropdown ul a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+    transform: translateY(-50%);
+  }
+
+  .navmenu .dropdown ul a::after {
+    display: none;
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 10px;
+  }
+
+  .navmenu .dropdown ul a:hover {
+    color: var(--nav-dropdown-hover-color);
+    padding-left: 24px;
+  }
+
+  .navmenu .dropdown ul a:hover::before {
+    width: 12px;
+  }
+
+  .navmenu .dropdown ul .active,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+    padding-left: 24px;
+  }
+
+  .navmenu .dropdown ul .active::before,
+  .navmenu .dropdown ul .active:hover::before,
+  .navmenu .dropdown ul li:hover>a::before {
+    width: 12px;
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: -20px;
+    left: auto;
+    right: calc(100% + 10px);
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: -20px;
+    right: calc(100% + 10px);
+    visibility: visible;
+  }
 }
