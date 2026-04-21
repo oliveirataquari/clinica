@@ -214,40 +214,6 @@
 
 
   /**
-   * Galeria de imagens (modal)
-   */
-  const images = document.querySelectorAll('.gallery-item');
-  const modalImage = document.getElementById('modalImage');
-  let currentIndex = 0;
-  images.forEach((img, index) => {
-    img.addEventListener('click', function () {
-      currentIndex = index;
-      modalImage.src = this.src;
-    });
-  });
-  document.getElementById('prevBtn').addEventListener('click', function () {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    modalImage.src = images[currentIndex].src;
-  });
-  document.getElementById('nextBtn').addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % images.length;
-    modalImage.src = images[currentIndex].src;
-  });
-  document.addEventListener('keydown', function (e) {
-    const modal = document.getElementById('imageModal');
-    if (modal.classList.contains('show')) {
-      if (e.key === 'ArrowLeft') {
-        document.getElementById('prevBtn').click();
-      }
-      if (e.key === 'ArrowRight') {
-        document.getElementById('nextBtn').click();
-      }
-    }
-  });
-
-
-
-  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
