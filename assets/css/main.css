@@ -29,6 +29,7 @@
   --gradient-clinica: linear-gradient(to right,#6051e6 6%,#5966e7 25%,#4f81e9 55%,#499bea 69%,#43a5eb 83%,#3bbeec 99%);  /* Fundo ao da Useall */
   --gradient-clinica-light: linear-gradient(to right,#4f81e9 5%,#499bea 50%,#43a5eb 83%,#3bbeec 99%);
   --accent2-color: #6051e6;
+  --amarelo-color: #FFCB17; /* Amarelo padrão para destaques em botão etc */
   
 
 }
@@ -1348,7 +1349,6 @@ section,
   }
 }
 
-
 .herocar img {
   position: absolute;
   inset: 0;
@@ -1385,6 +1385,15 @@ section,
   position: absolute;
   inset: 0;
   z-index: 2;
+}
+
+.herocar .carousel-item h2 {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .herocar .carousel-item h2 {
+    font-size: 22px;
+  }
 }
 
 .herocar .carousel-container {
@@ -1502,6 +1511,35 @@ section,
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* Botão agendar consulta carousel #F0BA00 */
+.herocar .carousel .carousel-item .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--amarelo-color);
+  color: #444;
+  padding: 18px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s both;
+}
+.herocar .carousel .carousel-item .cta-button i {
+  transition: transform 0.3s ease;
+  margin-right: 5px;
+}
+.herocar .carousel .carousel-item .cta-button:hover {
+  background: color-mix(in srgb, var(--amarelo-color), black 12%);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px color-mix(in srgb, #333, transparent 55%);
+}
+.herocar .carousel .carousel-item .cta-button:hover i {
+  transform: translateX(4px);
+}
+
 
 
 
@@ -7155,8 +7193,10 @@ section,
 
 
 
+
+
 /*--------------------------------------------------------------
-# Tiago
+# Tiago - trechos adicionais
 --------------------------------------------------------------*/
 
 .hide {
@@ -7187,180 +7227,35 @@ section,
 
 
 
+/* Galeria de imagens */
+.gallery-carousel {
+  position: relative;
+}
 
-/*--------------------------------------------------------------
-# Navigation Menu (examinar)
---------------------------------------------------------------*/
-/* Desktop Navigation */
-@media (min-width: 1200px) {
-  .navmenu {
-    padding: 0;
-  }
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+}
 
-  .navmenu ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
+.gallery-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+@media (max-width: 767.98px) {
+  .gallery-item img {
+    width: 100%;
+    height: 280px;
   }
+}
 
-  .navmenu li {
-    position: relative;
-  }
+/* .gallery-item:hover img {
+  transform: scale(1.08);
+} */
 
-  .navmenu>ul>li {
-    white-space: nowrap;
-    padding: 0;
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-color);
-    font-size: 15px;
-    /* padding: 12px 18px; EXAMINE AQUI */
-    font-family: var(--nav-font);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 11px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-  }
-
-  .navmenu>ul>li>a::after {
-    content: "";
-    position: absolute;
-    left: 18px;
-    bottom: 8px;
-    width: 6px;
-    height: 6px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.3s ease;
-  }
-
-  .navmenu>ul>li>a:hover,
-  .navmenu>ul>li>.active,
-  .navmenu>ul>li>.active:focus {
-    color: var(--nav-hover-color);
-  }
-
-  .navmenu>ul>li>a:hover::after,
-  .navmenu>ul>li>.active::after,
-  .navmenu>ul>li>.active:focus::after {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .navmenu>ul>li:hover>a i {
-    transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 20px;
-    background: var(--nav-dropdown-background-color);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    position: absolute;
-    visibility: hidden;
-    left: 0;
-    top: calc(100% + 20px);
-    opacity: 0;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.18);
-    min-width: 220px;
-    overflow: visible;
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 100%;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--nav-dropdown-color);
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .navmenu .dropdown ul a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--accent-color);
-    transition: width 0.3s ease;
-    transform: translateY(-50%);
-  }
-
-  .navmenu .dropdown ul a::after {
-    display: none;
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 10px;
-  }
-
-  .navmenu .dropdown ul a:hover {
-    color: var(--nav-dropdown-hover-color);
-    padding-left: 24px;
-  }
-
-  .navmenu .dropdown ul a:hover::before {
-    width: 12px;
-  }
-
-  .navmenu .dropdown ul .active,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-    padding-left: 24px;
-  }
-
-  .navmenu .dropdown ul .active::before,
-  .navmenu .dropdown ul .active:hover::before,
-  .navmenu .dropdown ul li:hover>a::before {
-    width: 12px;
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: -20px;
-    left: auto;
-    right: calc(100% + 10px);
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: -20px;
-    right: calc(100% + 10px);
-    visibility: visible;
-  }
+/* Estilo das setas */
+.gallery-next,
+.gallery-prev {
+  color: #fff;
 }
