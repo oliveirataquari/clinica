@@ -30,8 +30,6 @@
   --gradient-clinica-light: linear-gradient(to right,#4f81e9 5%,#499bea 50%,#43a5eb 83%,#3bbeec 99%);
   --accent2-color: #6051e6;
   --amarelo-color: #FFCB17; /* Amarelo padrão para destaques em botão etc */
-  
-
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -3600,6 +3598,7 @@ section,
 --------------------------------------------------------------*/
 .testimonials {
   background: color-mix(in srgb, var(--accent-color), transparent 96%);
+  background-color:#43a5eb
   position: relative;
   overflow: hidden;
   /* Left Sidebar */
